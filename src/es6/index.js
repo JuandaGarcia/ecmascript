@@ -32,3 +32,66 @@ let team3 = ['Jose', ...team1, ...team2]
 console.log(team3)
 
 //let (Scope)
+
+//Paramtros en objetos
+
+let name = 'Juan'
+let age = 20
+
+//es5
+let obj = { name: name, age: age }
+//em6
+let obj2 = { name, age }
+
+console.log(obj2)
+
+//arrow functions :D
+
+//Promesas
+const helloPromise = () => {
+	return new Promise((resolve, reject) => {
+		if (true) {
+			resolve('Good')
+		} else {
+			reject('Bad')
+		}
+	})
+}
+
+helloPromise()
+	.then((response) => console.log(response))
+	.catch((error) => console.log(error))
+
+//clases
+class calculator {
+	constructor() {
+		this.valueA = 0
+		this.valueB = 0
+	}
+
+	sumar(A, B) {
+		this.valueA = A
+		this.valueB = B
+		return this.valueA + this.valueB
+	}
+}
+
+const calc = new calculator()
+console.log(calc.sumar(1, 2))
+
+//modulos :D
+
+//Generadores
+function* helloWord() {
+	if (true) {
+		yield 'hello, '
+	}
+	if (true) {
+		yield 'word'
+	}
+}
+
+const genaratorHello = helloWord()
+console.log(genaratorHello.next().value)
+console.log(genaratorHello.next().value)
+console.log(genaratorHello.next().value)
